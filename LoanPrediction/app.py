@@ -8,7 +8,7 @@ loadedmodel = pickle.load(open('loan_data_set.pkl','rb'))
 @app.route("/", methods = ['GET'])
 def home():
     return render_template('index.html')
-@app.route("https://prediction-loan-project.herokuapp.com/prediction", methods =['POST'])
+@app.route("/prediction", methods =['POST'])
 def predict():
     Total_Income = float(request.form['Total_Income'])
     LoanAmount = float(request.form['LoanAmount'])
